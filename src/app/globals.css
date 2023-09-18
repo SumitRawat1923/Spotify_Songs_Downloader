@@ -1,27 +1,32 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+* {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+  margin: 3px;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-white bg-opacity-40 hover:bg-opacity-60;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.btn {
+  @apply px-4 py-2 font-semibold;
+}
+.btn-circle {
+  @apply rounded-full p-3 bg-white bg-opacity-20 hover:bg-opacity-50 w-[50px] h-[50px] text-white;
+}
+.opa {
+  @apply bg-white bg-opacity-20 hover:bg-opacity-50;
+}
+.heading {
+  @apply text-white  font-extrabold text-4xl my-6;
 }
