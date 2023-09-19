@@ -36,7 +36,7 @@ export default page;
 
 async function CategoryFetcher(accessToken, id) {
   const Response = await fetch(
-    `https://api.spotify.com/v1/browse/categories/${id}/playlists`,
+    `https://api.spotify.com/v1/browse/categories/${id}/playlists?country=IN`,
     {
       method: "GET",
       headers: {
