@@ -23,7 +23,14 @@ async function page({ params: { id }, searchParams: { name } }) {
         <div className="relative overflow-x-auto">
           <div className="px-6 grid grid-cols-5 gap-6">
             {items.map((playList) => {
-              return <ListItem key={playList.id} type={playList.type} data={playList} />;
+             if (playList)
+             {return (
+                  <ListItem
+                    key={playList.id}
+                    type={playList.type}
+                    data={playList}
+                  />
+                )}
             })}
           </div>
         </div>
